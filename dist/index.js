@@ -15,7 +15,7 @@ const HTTPS = "https://";
 /**
  * Default props to be used when creating the Helm chart
  */
-exports.defaultProps = {
+const defaultProps = {
     chart: "kube-prometheus-stack",
     repository: "https://prometheus-community.github.io/helm-charts",
     version: "46.8.0",
@@ -55,16 +55,16 @@ class KubePrometheusAddOn extends blueprints.addons.HelmAddOn {
             "alb.ingress.kubernetes.io/target-type": "ip",
             "alb.ingress.kubernetes.io/certificate-arn": (_b = clusterInfo.getResource(helmOptions.certificateResourceName)) === null || _b === void 0 ? void 0 : _b.certificateArn
         };
-        (0, utils_1.setPath)(values, "grafana.ingress.enabled", true);
-        (0, utils_1.setPath)(values, "grafana.ingress.ingressClassName", "alb");
-        (0, utils_1.setPath)(values, "grafana.ingress.host", helmOptions.subdomain);
-        (0, utils_1.setPath)(values, "grafana.ingress.annotations", annotations);
+        (0, blueprints.utils.setPath)(values, "grafana.ingress.enabled", true);
+        (0, blueprints.utils.setPath)(values, "grafana.ingress.ingressClassName", "alb");
+        (0, blueprints.utils.setPath)(values, "grafana.ingress.host", helmOptions.subdomain);
+        (0, blueprints.utils.setPath)(values, "grafana.ingress.annotations", annotations);
         return values;
     }
 }
 
 __decorate([
-    (0, utils_1.dependable)('AwsLoadBalancerControllerAddOn'),
-    (0, utils_1.dependable)('ExternalsSecretsAddOn')
-], BackstageAddOn.prototype, "deploy", null);
-exports.BackstageAddOn = BackstageAddOn;
+    (0, blueprints.utils.dependable)('AwsLoadBalancerControllerAddOn'),
+    (0, blueprints.utils.dependable)('ExternalsSecretsAddOn')
+], KubePrometheusAddOn.prototype, "deploy", null);
+exports.KubePrometheusAddOn = KubePrometheusAddOn;

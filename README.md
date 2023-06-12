@@ -1,6 +1,5 @@
 # kube-prometheus-eks-blueprint-add
 
-
 This module is a Kube-Prometheus addon for https://github.com/aws-quickstart/cdk-eks-blueprints.
 
 # Kube-Prometheus on EKS
@@ -19,9 +18,9 @@ Components included in this package:
 
 This example deploys the following resources
 
-- Creates EKS Cluster Control plane with public endpoint (for demo purpose only) with a managed node group
-- Deploys supporting add-ons: ClusterAutoScaler, AwsLoadBalancerController, VpcCni, CoreDns, KubeProxy, EbsCsiDriver
-- Deploy Kube-Prometheurs on the EKS cluster
+* Creates EKS Cluster Control plane with public endpoint (for demo purpose only) with a managed node group
+* Deploys supporting add-ons: ClusterAutoScaler, AwsLoadBalancerController, VpcCni, CoreDns, KubeProxy, EbsCsiDriver
+* Deploy Kube-Prometheurs on the EKS cluster
 
 Note: we use EKS 1.21 here which is the latest EKS version supported by Kubeflow. see reference below <br>
 https://awslabs.github.io/kubeflow-manifests/docs/about/eks-compatibility/
@@ -34,8 +33,6 @@ Ensure that you have installed the following tools on your machine.
 2. [kubectl](https://Kubernetes.io/docs/tasks/tools/)
 3. [cdk](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install)
 4. [npm](https://docs.npmjs.com/cli/v8/commands/npm-install)
-
-
 
 ## Deploy EKS Cluster with Amazon EKS Blueprints for CDK
 

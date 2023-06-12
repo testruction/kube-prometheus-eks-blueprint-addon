@@ -18,25 +18,19 @@ import { ClusterInfo, Values } from "@aws-quickstart/eks-blueprints";
 
 export interface KubePrometheusAddOnProps extends HelmAddOnUserProps {
     /**
-     * The subdomain that will be assigned to the Backstage application.
+     * The namespace that will be assigned to the Kube-Prometheus stack.
+     * @default 'monitoring'
+     */
+    namespace?: string;
+
+    /**
+     * The subdomain that will be assigned to the Kube-Prometheus stack.
      */
     subdomain: string;
+    /**
+     * The resource name of the certificate to be assigned to the Load Balancer.
+     */
     certificateResourceName: string;
-    /**
-     * The registry URL of the Backstage application's Docker image.
-     */
-    /**
-     * The registry URL of the Backstage application's Docker image.
-     */
-    imageRegistry: string;
-    /**
-     * The repository name in the "imageRegistry".
-     */
-    imageRepository: string;
-    /**
-     * The tag of the Backstage application's Docker image.
-     * @default 'latest'
-     */
 }
 /**
  * Main class to instantiate the Helm chart

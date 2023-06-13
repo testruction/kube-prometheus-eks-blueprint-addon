@@ -5,7 +5,7 @@
  * Kube-Prometeus is a complete stack that leverage Prometheus to monitor Kubernetes and applications running on Kubernetes.
  * 
  * @author "Florian JUDITH <florian.judith.b@gmail.com>"
- * @version 2.0.0
+ * @version 1.3.0
  * Copyright (c) [2023], [Testruction.io]
  * All rights reserved.
  * 

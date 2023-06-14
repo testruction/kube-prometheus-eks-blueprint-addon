@@ -2,10 +2,10 @@
  * Kube-Prometheus for Amazon EKS Blueprint
  * 
  * Description: This file contains the implementation of the Kube-Prometheus stack for Amazon EKS Blueprint.
- * Kube-Prometeus is a complete stack that leverage Prometheus to monitor Kubernetes and applications running on Kubernetes.
+ * Kube-Prometheus is a complete stack that leverage Prometheus to monitor Kubernetes and applications running on Kubernetes.
  * 
  * @author "Florian JUDITH <florian.judith.b@gmail.com>"
- * @version 1.3.0
+ * @version 1.5.0
  * Copyright (c) [2023], [Testruction.io]
  * All rights reserved.
  * 

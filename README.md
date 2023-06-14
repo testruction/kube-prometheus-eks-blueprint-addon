@@ -57,7 +57,7 @@ Replace the contents of bin/<your-main-file>.ts  with the following:
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
-import * as KubeflowAddOn from 'eks-blueprints-cdk-kubeflow-ext';
+import * as KubPrometheusAddOn from '@testruction/kube-prometheus-eks-blueprints-addon';
 const app = new cdk.App();
 // AddOns for the cluster.
 const addOns: Array<blueprints.ClusterAddOn> = [
@@ -68,7 +68,7 @@ const addOns: Array<blueprints.ClusterAddOn> = [
     new blueprints.addons.CoreDnsAddOn(),
     new blueprints.addons.KubeProxyAddOn(),
     new blueprints.addons.EbsCsiDriverAddOn(),
-    new KubeflowAddOn({
+    new KubPrometheusAddOn({
          namespace: 'monitoring'
      })
 ];

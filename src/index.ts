@@ -30,7 +30,7 @@ export interface KubePrometheusAddOnProps extends HelmAddOnUserProps {
      */
     namespace: string;
     /**
-     * The subdomain that will be assigned to the Backstage application.
+     * The subdomain that will be assigned to the Grafana application.
      */
     subdomain: string;
 

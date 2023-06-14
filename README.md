@@ -1,4 +1,4 @@
-# kube-prometheus-eks-blueprint-add
+# kube-prometheus-eks-blueprint-addon
 
 This module is a Kube-Prometheus addon for https://github.com/aws-quickstart/cdk-eks-blueprints.
 
